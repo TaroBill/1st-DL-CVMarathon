@@ -8,6 +8,7 @@ Color=["RGB","HSV","HLS","LAB"]
 while(True):
     cv2.imshow(Color[i],img[i])
     k = cv2.waitKey(0)
+    cv2.destroyAllWindows()
     if k==27:
         cv2.destroyAllWindows()
         break
