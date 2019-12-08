@@ -13,7 +13,7 @@ img = cv2.imread("C://pictures//lena.png")
 
 #調整飽和度
 # =============================================================================
-# ercentOfChange=-0.2
+# percentOfChange=-0.2
 # imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 # imgHSV = imgHSV.astype('float32')
 # imgHSV[...,-1] = imgHSV[...,-1]/255+percentOfChange
