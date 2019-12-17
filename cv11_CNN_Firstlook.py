@@ -8,7 +8,7 @@ from keras.models import Model
 classifier=Sequential()
 
 ##Kernel size 3*3，用32張，輸入大小28*28*1
-classifier.add(Convolution2D(32,3,3,input_shape=(28,28,1)))#'''32張Kernel，大小為3*3，輸入尺寸為28*28*1'''
+classifier.add(Convolution2D(64,5,5,input_shape=(28,28,1)))#'''32張Kernel，大小為3*3，輸入尺寸為28*28*1'''
 ##看看model結構
 print(classifier.summary())
 '''理解輸出Total params為何==320'''
@@ -19,7 +19,7 @@ classifier=Sequential()
 inputs = Input(shape=(784,))
 '''輸入尺寸為28*28*1'''
 ##CNN中用了(3*3*1)*32個神經元，我們這邊也用相同神經元數量
-x=Dense(288)(inputs)
+x=Dense(32*5*5)(inputs)
 '''使用288個神經元'''
 model = Model(inputs=inputs, outputs=x)
 model.build(inputs)
